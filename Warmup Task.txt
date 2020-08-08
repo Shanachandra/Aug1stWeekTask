@@ -1,0 +1,461 @@
+*******************WarmUP*************************************
+//Problem 1
+var num = 10;
+function addFive(num) { 
+return num+5;
+}
+var result = addFive(num)
+console.log(result)
+
+
+//Problem 2
+getOpposite(5);
+getOpposite(0);
+getOpposite(-5);
+getOpposite("5a");
+getOpposite(5.5);
+
+
+function getOpposite(num) {
+    if(!Number.isInteger(num))
+    {
+    console.log(-1)
+    }
+    else
+    {
+        console.log(-(num))
+    }
+}
+
+//Problem 3
+toSeconds(5) 
+toSeconds(3) 
+toSeconds(2) 
+function toSeconds(min) {
+    console.log(min*60)
+}
+
+//Problem 4
+toInteger("6") 
+toInteger("1000") 
+toInteger("12") 
+
+
+function toInteger(mystr) {
+    console.log(+(mystr))
+}
+
+//Problem 5
+nextNumber(0) 
+nextNumber(9) 
+nextNumber(-3)
+function nextNumber(myint) {
+    console.log(myint+1)
+}
+
+//Problem 6
+getFirstElement([1, 2, 3]) 
+getFirstElement([80, 5, 100]) 
+getFirstElement([-500, 0, 50])
+function getFirstElement(arr) {
+    console.log(arr[0])
+}
+
+//Problem 7
+hourToSeconds(2) 
+hourToSeconds(10) 
+hourToSeconds(24)
+function hourToSeconds(arr) {
+    console.log(arr*60*60)
+}
+
+//Problem 8
+findPerimeter(6, 7) 
+findPerimeter(20, 10) 
+findPerimeter(2, 9)
+function findPerimeter(num1,num2) {
+    console.log(2*(num1+num2))
+}
+
+//Problem 9
+lessThan100(22, 15) 
+lessThan100(83, 34) 
+function lessThan100(num1,num2) {
+    if(num1+num2>100)
+    {
+        console.log(false)
+    }
+    else
+    {
+        console.log(true)
+    }
+}
+
+//Problem 10
+remainder(1, 3)
+remainder(3, 4)
+remainder(-9, 45) 
+remainder(5, 5) 
+function remainder(num1,num2) {
+    console.log(num1%num2)
+}
+
+//Problem 11
+CountAnimals(2, 3, 5) 
+CountAnimals(1, 2, 3) 
+CountAnimals(5, 2, 8) 
+function CountAnimals(tur,horse,pigs) {
+    console.log((tur*2)+(horse*4)+(pigs*4))
+}
+
+//Problem 12
+frames(1, 1) 
+frames(10, 1) 
+frames(10, 25) 
+function frames(num1,num2) {
+    console.log((num1*60)*num2)
+}
+
+//Problem 13
+divisibleByFive(5)
+divisibleByFive(-55) 
+divisibleByFive(37) 
+function divisibleByFive(num1) {
+
+    if(num1%5===0)
+    {
+        console.log(true)
+    }
+    else
+    {
+        console.log(false)
+    }
+}
+
+//Problem 14
+isEven(12);
+isEven(0);
+isEven(11);
+isEven("11h");
+function isEven(num){
+ if(!Number.isInteger(num))
+ {
+     console.log(-1)
+     
+ }
+ if(Number.isInteger(num))
+ {
+  if(num%2===0)
+ {
+     console.log("true")
+ }
+ else
+ {
+     console.log("false")
+ }
+ }
+}
+
+//Problem 15
+areBothOdd(1, 3);
+areBothOdd(1, 4);
+areBothOdd(2, 3);
+areBothOdd(0, 0);
+function areBothOdd(num1, num2){
+    if(num1%2===0 && num2%2===0)
+    {
+        console.log("true")
+    }
+    else
+    {
+        console.log("false")
+    }
+}
+
+//Problem 16
+getFullName("GUVI","GEEK");
+getFullName("GUVI","");
+getFullName("","GEEK");
+getFullName("", "");
+function getFullName(firstName, lastName){
+    if(typeof(firstName)===undefined && typeof(lastName)!==undefined)
+    {
+        console.log(lastName);
+    }
+   else if(typeof(firstName)!==undefined && typeof(lastName)===undefined)
+{
+console.log(firstName)
+}    
+else 
+{
+    console.log(firstName+lastName)
+}
+}
+
+//Problem 17
+getLengthOfWord("GUVI");
+getLengthOfWord("");
+getLengthOfWord();
+getLengthOfWord(9);
+function getLengthOfWord(word1){
+    if(Number.isInteger(word1)|| typeof(word1)===undefined)
+    {
+        console.log(-1)
+    }
+    else
+    {
+    console.log(word1.length)
+    }
+}
+
+//Problem 18
+isSameLength("GUVI", "GEEK");
+function isSameLength(word1, word2){
+ if(word1.length===word2.length)
+ {
+     console.log("true")
+ }
+ else
+ {
+     console.log("false")
+ }
+}
+
+//Problem 19
+getNthElement([1, 3, 5], 1);
+function getNthElement(array,n){
+    
+    console.log(array[n]);
+}
+
+//Problem 20
+getLastElement([1, 2, 3, 4]);
+function getLastElement(array){
+    console.log(array[array.length-1])
+}
+
+//Problem 21
+var obj = {
+ mykey: "value"
+};
+getProperty(obj,'mykey');
+getProperty(obj,'dummykey');
+
+function getProperty(obj, key) {
+
+    console.log(obj[key])
+}
+
+//Problem 22
+var obj = {
+ 
+};
+function addProperty(obj, key){
+    obj[key]=true;
+    console.log(obj)
+}
+addProperty(obj, "mykey");
+
+//Problem 23
+var obj = {
+name: "value"
+};
+function removeProperty(obj, key){
+    delete obj.key
+    console.log(obj)
+}
+removeProperty(obj, "name");
+
+//Problem 24
+var arr = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+var count=0;
+var sum=0;
+ var ar=[];
+var ar2 = function countPositivesSumNegatives(arr) {
+    for(var i=0;i< arr.length;i++)
+    {
+     if(arr[i]>0)
+     {
+         count=count+1;
+     }
+     else
+     {
+         sum=sum+arr[i];
+     }
+    }
+ ar.push(count);
+ ar.push(sum);
+ console.log(ar)
+
+}
+ar2(arr);
+
+//Problem 25
+function getPositives(ar)
+{
+ // your code here
+ ar.forEach((item)=>{
+     if(item>0)
+     {
+        newarr.push(item) 
+     }
+ })
+ return newarr;
+}
+var newarr=[];
+var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+var ar2 = getPositives(ar);
+console.log(ar2);
+
+//Problem 26
+powersOfTwo(0)
+powersOfTwo(1)
+powersOfTwo(2)
+var newval;
+function powersOfTwo(n){
+  for(var i=0;i<=n;i++)
+  {
+      newval=newval+" "+2**i;
+  }
+  console.log(newval);
+  newval="";
+}
+
+//Problem 27
+function findMax(ar)
+{
+  ar.map((item)=>{
+       if(dummy>item)
+       {
+           dummy=dummy;
+       }
+       else{
+           dummy=item;
+       }
+   })
+   return dummy
+}
+var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+var dummy=0;
+var max = findMax(ar);
+console.log("Max: ", max);
+
+//Probelm 28
+printPrimes(100);
+function printPrimes(nPrimes)
+{
+ var n = 0;
+ var i = 2;
+ 
+ while(n < nPrimes)
+ {
+ if (isPrime(i))
+ {
+ console.log(n, " →" , i);
+ n++;
+ }
+ 
+ i++;
+ }
+}
+
+function isPrime(n)
+{
+    var prime =true;
+    if(n===2)
+    {
+        return true;
+    }
+    for( var i=2;i<n;i++)
+    {
+        if(n%i===0)
+        {
+            prime=false;
+            return false;
+        }
+    }
+    if(prime===true)
+    {
+        return true;
+    }
+ 
+}
+
+//Problem 29
+console.log(getPrimes(10, 100));
+function getPrimes(nPrimes, startAt)
+{
+    var i=1;
+    while(i<=nPrimes)
+    {
+        var result= isPrime(startAt)
+        if(result===true)
+        {
+        i++;
+            
+        }
+        
+    }
+}
+function isPrime(n)
+{
+     var prime =true;
+    if(n===2)
+    {
+        return true;
+    }
+    for( var i=2;i<n/2+1;i++)
+    {
+        if(n%i===0)
+        {
+            prime=false;
+            return false;
+        }
+    }
+    if(prime===true)
+    {
+        return true;
+    }
+ 
+}
+
+//Probelm 30
+var s = reverseString("JavaScript");
+function reverseString(s)
+{
+   console.log(s.split("").reverse().join(""));
+}
+
+
+//Problem 31
+var ar1 = [1, 2, 3];
+var ar2 = [4, 5, 6];
+var ar = mergeArrays(ar1, ar2);
+console.log(ar);
+function mergeArrays(ar1, ar2)
+{
+ var result = [];
+for(let el of ar1)
+ {
+ result.push(el);
+ }
+ for(let e2 of ar2)
+ {
+ result.push(e2);
+ } 
+ return result;
+}
+
+//Problem 32
+console.log(sumCSV("1.5, 2.3, 3.1, 4, 5.5, 6, 7, 8, 9, 10.9"));
+function sumCSV(s)
+{
+    var sum=0;
+    var splitted=s.split(",");
+    for(var i=0;i<splitted.length;i++)
+    {
+        sum=sum+(+splitted[i]);
+        
+    }
+    return sum;
+  }

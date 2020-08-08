@@ -1,0 +1,617 @@
+Window:
+ Window is the first thing that get loaded in to browser. Window object have properties like length, innerWidth, innerHeight, name.
+ Window object represents the current browsing context.
+ It contains:
+   window.location, window.history, window.screen, window.status, or the window.document.
+  
+Document:
+ Document interface represent any web page  loaded in the browser and serves as an entyr point in to web page's content which is the DOM tree.
+ When an HTML document is loaded into a web browser , it becomes a document object. 
+ It is the root node of the HTML document. The document actually gets loaded inside the window object and has properties available to it like title, URL, cookie, etc.
+ HTML documents, served with the "text/html" content type, also implement the HTMLDocument interface, whereas XML and SVG documents implement the XMLDocument interface
+ 
+ Screen:
+ Screen is a small information object about physical screen dimensions . It can be used to display screen width, height, colorDepth, pixelDepth etc.
+ It is not mandatory to write window prefix with screen object. It can be written without window prefix.
+ 
+ 
+ Mandotory task:
+ 
+//Print odd number in an array:
+ //Anonymous:
+ var oddnumber= function(array){
+    array.forEach((item)=>{
+        if(item%2===0)
+        {
+        }
+        else
+        {
+            console.log(item)
+        }
+    })
+}
+
+oddnumber([2,3,4,5,6,7,8])
+
+ //IIFE:
+ (function(array){
+     array.forEach((item)=>{
+        if(item%2===0)
+        {
+        }
+        else
+        {
+            console.log(item)
+        }
+    })
+})([2,3,4,5,6,7,8])
+
+//convert all string to tiltle caps in an array
+Anonymous:
+var capsconvert= function(array){
+    array.forEach((item)=>{
+        item=item.charAt(0).toUpperCase() + item.slice(1)
+        console.log(item)
+    })
+}
+
+capsconvert(["one","two","three"])
+
+//sum of all number in an array
+var sumofall= function(array){
+  var  sum=array.reduce((currentvalue,item)=>{return item+currentvalue},0)
+    console.log(sum);
+}
+
+sumofall([1,2,3,4,5,6,7,8,9,10])
+
+//prime number in an array
+var primenum= function(array){
+  array.map((item)=>{
+      var found=false;
+      
+      for(var i=2;i<item;i++)
+      {
+          if(item%i===0)
+          {
+              found=true;
+              break;
+          }
+      }
+      if(found===false)
+      {
+          console.log(item)
+      }
+  })
+}
+
+primenum([1,2,3,4,5,6,7,8,9,10])
+
+//Palindrome
+var palim= function(array){
+array.map((item)=>{
+    var reversestring=item.split("").reverse().join("");
+    if(item==reversestring)
+    {
+        console.log(item);
+    }
+    
+})
+}
+
+palim(["too","oo"])
+
+//Median
+var median= function(array1, array2){
+var new1=array1.concat(array2);
+var sorted=new1.sort();
+var len=sorted.length;
+var sum= (+sorted[len/2])+(+sorted[len/2-1])
+console.log(sum)
+}
+
+median([1,2,3,4],[2,3,4,5])
+
+//duplicate
+var duplicate= function(array){
+var newarray=[];
+array.forEach((item)=>{
+    if(newarray.indexOf(item)>-1)
+    {
+        
+    }
+    else
+    {
+        newarray.push(item);
+    }
+})
+console.log(newarray)
+}
+
+duplicate([1,2,3,4,2,5,7,3])
+
+
+
+
+
+*******************WarmUP*************************************
+//
+var num = 10;
+function addFive(num) { 
+return num+5;
+}
+var result = addFive(num)
+console.log(result)
+
+
+//
+getOpposite(5);
+getOpposite(0);
+getOpposite(-5);
+getOpposite("5a");
+getOpposite(5.5);
+
+
+function getOpposite(num) {
+    if(!Number.isInteger(num))
+    {
+    console.log(-1)
+    }
+    else
+    {
+        console.log(-(num))
+    }
+}
+//
+
+toSeconds(5) 
+toSeconds(3) 
+toSeconds(2) 
+function toSeconds(min) {
+    console.log(min*60)
+}
+
+//
+toInteger("6") 
+toInteger("1000") 
+toInteger("12") 
+
+
+function toInteger(mystr) {
+    console.log(+(mystr))
+}
+
+//
+nextNumber(0) 
+nextNumber(9) 
+nextNumber(-3)
+function nextNumber(myint) {
+    console.log(myint+1)
+}
+
+//
+getFirstElement([1, 2, 3]) 
+getFirstElement([80, 5, 100]) 
+getFirstElement([-500, 0, 50])
+function getFirstElement(arr) {
+    console.log(arr[0])
+}
+
+//
+hourToSeconds(2) 
+hourToSeconds(10) 
+hourToSeconds(24)
+function hourToSeconds(arr) {
+    console.log(arr*60*60)
+}
+//
+findPerimeter(6, 7) 
+findPerimeter(20, 10) 
+findPerimeter(2, 9)
+function findPerimeter(num1,num2) {
+    console.log(2*(num1+num2))
+}
+//
+lessThan100(22, 15) 
+// 22 + 15 = 37
+lessThan100(83, 34) 
+function lessThan100(num1,num2) {
+    if(num1+num2>100)
+    {
+        console.log(false)
+    }
+    else
+    {
+        console.log(true)
+    }
+}
+
+//
+remainder(1, 3)
+remainder(3, 4)
+remainder(-9, 45) 
+remainder(5, 5) 
+function remainder(num1,num2) {
+    console.log(num1%num2)
+}
+
+//
+CountAnimals(2, 3, 5) 
+CountAnimals(1, 2, 3) 
+CountAnimals(5, 2, 8) 
+function CountAnimals(tur,horse,pigs) {
+    console.log((tur*2)+(horse*4)+(pigs*4))
+}
+
+//
+frames(1, 1) 
+frames(10, 1) 
+frames(10, 25) 
+function frames(num1,num2) {
+    console.log((num1*60)*num2)
+}
+
+//
+divisibleByFive(5)
+divisibleByFive(-55) 
+divisibleByFive(37) 
+function divisibleByFive(num1) {
+
+    if(num1%5===0)
+    {
+        console.log(true)
+    }
+    else
+    {
+        console.log(false)
+    }
+}
+
+//
+isEven(12);
+isEven(0);
+isEven(11);
+isEven("11h");
+function isEven(num){
+ // your code here
+ if(!Number.isInteger(num))
+ {
+     console.log(-1)
+     
+ }
+ if(Number.isInteger(num))
+ {
+  if(num%2===0)
+ {
+     console.log("true")
+ }
+ else
+ {
+     console.log("false")
+ }
+ }
+}
+
+//
+areBothOdd(1, 3);
+areBothOdd(1, 4);
+areBothOdd(2, 3);
+areBothOdd(0, 0);
+function areBothOdd(num1, num2){
+    if(num1%2===0 && num2%2===0)
+    {
+        console.log("true")
+    }
+    else
+    {
+        console.log("false")
+    }
+ // your code here
+}
+
+//
+getFullName("GUVI","GEEK");
+getFullName("GUVI","");
+getFullName("","GEEK");
+getFullName("", "");
+function getFullName(firstName, lastName){
+    if(typeof(firstName)===undefined && typeof(lastName)!==undefined)
+    {
+        console.log(lastName);
+    }
+   else if(typeof(firstName)!==undefined && typeof(lastName)===undefined)
+{
+console.log(firstName)
+}    
+else 
+{
+    console.log(firstName+lastName)
+}
+ // your code here
+}
+
+//
+getLengthOfWord("GUVI");
+getLengthOfWord("");
+getLengthOfWord();
+getLengthOfWord(9);
+function getLengthOfWord(word1){
+    if(Number.isInteger(word1)|| typeof(word1)===undefined)
+    {
+        console.log(-1)
+    }
+    else
+    {
+    console.log(word1.length)
+    }
+ // your code here
+}
+
+//
+isSameLength("GUVI", "GEEK");
+function isSameLength(word1, word2){
+ if(word1.length===word2.length)
+ {
+     console.log("true")
+ }
+ else
+ {
+     console.log("false")
+ }
+}
+
+//
+getNthElement([1, 3, 5], 1);
+function getNthElement(array,n){
+    
+    console.log(array[n]);
+}
+
+//
+getLastElement([1, 2, 3, 4]);
+function getLastElement(array){
+    console.log(array[array.length-1])
+ // your code here
+}
+
+//
+
+var obj = {
+ mykey: "value"
+};
+getProperty(obj,'mykey');
+getProperty(obj,'dummykey');
+
+function getProperty(obj, key) {
+
+    console.log(obj[key])
+ // your code here
+}
+
+//
+var obj = {
+ 
+};
+function addProperty(obj, key){
+    obj[key]=true;
+    console.log(obj)
+ // your code here
+}
+addProperty(obj, "mykey");
+
+//
+var obj = {
+name: "value"
+};
+function removeProperty(obj, key){
+    delete obj.key
+    console.log(obj)
+ // your code here
+}
+removeProperty(obj, "name");
+
+//
+var arr = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+var count=0;
+var sum=0;
+ var ar=[];
+var ar2 = function countPositivesSumNegatives(arr) {
+    for(var i=0;i< arr.length;i++)
+    {
+     if(arr[i]>0)
+     {
+         count=count+1;
+     }
+     else
+     {
+         sum=sum+arr[i];
+     }
+    }
+ ar.push(count);
+ ar.push(sum);
+ console.log(ar)
+
+}
+ar2(arr);
+
+//
+function getPositives(ar)
+{
+ // your code here
+ ar.forEach((item)=>{
+     if(item>0)
+     {
+        newarr.push(item) 
+     }
+ })
+ return newarr;
+}
+var newarr=[];
+var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+var ar2 = getPositives(ar);
+console.log(ar2);
+
+//
+
+powersOfTwo(0)
+powersOfTwo(1)
+powersOfTwo(2)
+var newval;
+function powersOfTwo(n){
+  for(var i=0;i<=n;i++)
+  {
+      newval=newval+" "+2**i;
+  }
+  console.log(newval);
+  newval="";
+}
+
+//
+function findMax(ar)
+{
+  ar.map((item)=>{
+       if(dummy>item)
+       {
+           dummy=dummy;
+       }
+       else{
+           dummy=item;
+       }
+   })
+   return dummy
+// your code here
+}
+var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+var dummy=0;
+var max = findMax(ar);
+console.log("Max: ", max);
+
+//
+printPrimes(100);
+// Function prints the first nPrimes numbers
+function printPrimes(nPrimes)
+{
+ var n = 0;
+ var i = 2;
+ 
+ while(n < nPrimes)
+ {
+ if (isPrime(i))
+ {
+ console.log(n, " →" , i);
+ n++;
+ }
+ 
+ i++;
+ }
+}
+// Returns true if a number is prime
+function isPrime(n)
+{
+    var prime =true;
+    if(n===2)
+    {
+        return true;
+    }
+    for( var i=2;i<n;i++)
+    {
+        if(n%i===0)
+        {
+            prime=false;
+            return false;
+        }
+    }
+    if(prime===true)
+    {
+        return true;
+    }
+ // your code here
+}
+
+//
+
+console.log(getPrimes(10, 100));
+function getPrimes(nPrimes, startAt)
+{
+    var i=1;
+    while(i<=nPrimes)
+    {
+        var result= isPrime(startAt)
+        if(result===true)
+        {
+        i++;
+            
+        }
+        
+    }
+// your code here
+
+}
+// Returns true if a number is prime
+function isPrime(n)
+{
+     var prime =true;
+    if(n===2)
+    {
+        return true;
+    }
+    for( var i=2;i<n/2+1;i++)
+    {
+        if(n%i===0)
+        {
+            prime=false;
+            return false;
+        }
+    }
+    if(prime===true)
+    {
+        return true;
+    }
+ // your code here
+}
+
+//
+var s = reverseString("JavaScript");
+function reverseString(s)
+{
+   // your code here  
+   console.log(s.split("").reverse().join(""));
+}
+
+
+//
+var ar1 = [1, 2, 3];
+var ar2 = [4, 5, 6];
+var ar = mergeArrays(ar1, ar2);
+console.log(ar);
+function mergeArrays(ar1, ar2)
+{
+ var result = [];
+//this will add the first array to the result array
+for(let el of ar1)
+ {
+ result.push(el);
+ }
+ for(let e2 of ar2)
+ {
+ result.push(e2);
+ }
+ //Some piece of code goes here 
+ 
+ return result;
+}
+
+//
+console.log(sumCSV("1.5, 2.3, 3.1, 4, 5.5, 6, 7, 8, 9, 10.9"));
+function sumCSV(s)
+{
+    var sum=0;
+    var splitted=s.split(",");
+    for(var i=0;i<splitted.length;i++)
+    {
+        sum=sum+(+splitted[i]);
+        
+    }
+    return sum;
+  // your code here
+}

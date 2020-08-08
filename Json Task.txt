@@ -1,0 +1,30 @@
+//Problem 1
+var obj = {name : "RajiniKanth", age : 33, hasPets : false};
+function printAllValues(obj) {
+    console.log(Object.keys(obj))
+}
+printAllValues(obj)
+
+//Problem 2
+var obj = {name : "RajiniKanth", age : 33, hasPets : false};
+function printAllValues(obj) {
+    console.log(Object.values(obj))
+}
+printAllValues(obj)
+
+//Problem 3
+var obj = {name : "RajiniKanth", age : 33, hasPets : false};
+function printAllValues(obj) {
+    console.log(Object.entries(obj))
+}
+printAllValues(obj)
+
+//Problem 4
+var arr = ["GUVI", "I", "am", "a geek"];
+var obj={};
+function transformFirstAndLast(arr) {
+ obj[arr[0]]=arr[arr.length-1]
+ return obj;
+}
+var res=transformFirstAndLast(arr)
+console.log(res)
